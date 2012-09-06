@@ -1,0 +1,13 @@
+Source: system-ui-brightness
+Section: user/other
+Priority: optional
+Maintainer: CODeRUS <coderusinbox@gmail.com>
+Build-Depends: debhelper (>= 5), libqt4-dev
+Standards-Version: 3.7.3
+Homepage: <insert the upstream URL, if relevant>
+
+Package: system-ui-brightness
+Architecture: armel
+Depends: unrestricted-system-ui
+Description: Status menu brightness extension
+XSBC-Maemo-Display-Name: Status menu brightness extension
