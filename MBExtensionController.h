@@ -7,6 +7,10 @@
 
 #include <QObject>
 
+#include <MFeedback>
+#include <QGesture>
+#include <QTapAndHoldGesture>
+
 #include "MBExtensionPlugin.h"
 #include "MBrightnessBar.h"
 #include "MBrightnessLabel.h"
@@ -22,6 +26,7 @@ public:
     virtual ~MBExtensionsController(); 
 
 protected:
+    bool event(QEvent *event);
     void mousePressEvent(QGraphicsSceneMouseEvent *ev);
     void mouseMoveEvent(QGraphicsSceneMouseEvent *ev);
 

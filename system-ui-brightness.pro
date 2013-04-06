@@ -15,7 +15,10 @@ desktop.path = /usr/share/meegotouch/applicationextensions
 png.files = icon-brightness-alpha.png
 png.path = /usr/share/themes/blanco/meegotouch/icons
 
-INSTALLS += target desktop png
+hacky.files = set_brightness.sh
+hacky.path = /opt/system-ui-brightness/bin
+
+INSTALLS += target desktop png hacky
 
 HEADERS += \
     MBExtensionPlugin.h \

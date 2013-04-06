@@ -9,12 +9,17 @@ MBExtensionsController::MBExtensionsController(MBExtensionsPlugin *extensionsPlu
 {
     setObjectName("StatusIndicatorMenuExtensionContentItem");
 
+    setMinimumHeight(72);
+    setMaximumHeight(72);
+
+    grabGesture(Qt::TapAndHoldGesture);
+
     MLocale locale;
     locale.installTrCatalog("settings");
     MLocale::setDefault(locale);
 
     QGraphicsLinearLayout *layout = new QGraphicsLinearLayout(Qt::Vertical, this);
-    layout->setContentsMargins(0,0,0,0);
+    layout->setContentsMargins(0,0,0,8);
     layout->setSpacing(8);
     a_label = new MBrightnessLabel(this);
     layout->addItem(a_label);
@@ -24,6 +29,20 @@ MBExtensionsController::MBExtensionsController(MBExtensionsPlugin *extensionsPlu
 
 MBExtensionsController::~MBExtensionsController()
 {
+}
+
+bool MBExtensionsController::event(QEvent *event)
+{
+    if (event->type() == QEvent::Gesture)
+    {
+        if (static_cast<QGestureEvent*>(event)->gesture(Qt::TapAndHoldGesture)->state() == Qt::GestureFinished)
+        {
+            MFeedback("priority2_grab", this).play();
+            a_brightness->switchHacky();
+        }
+    }
+    else
+        return MWidget::event(event);
 }
 
 void MBExtensionsController::mousePressEvent(QGraphicsSceneMouseEvent *ev)

@@ -1,3 +1,21 @@
+system-ui-brightness (1.0.3) unstable; urgency=low
+
+  * Hacky improvements.
+
+ -- CODeRUS <coderusinbox@gmail.com>  Sun, 26 Aug 2012 16:43:33 +0600
+
+system-ui-brightness (1.0.2) unstable; urgency=low
+
+  * Hacky improvements.
+
+ -- CODeRUS <coderusinbox@gmail.com>  Sun, 26 Aug 2012 16:43:33 +0600
+
+system-ui-brightness (1.0.1) unstable; urgency=low
+
+  * Hacky test.
+
+ -- CODeRUS <coderusinbox@gmail.com>  Sun, 26 Aug 2012 16:43:33 +0600
+
 system-ui-brightness (1.0.0) unstable; urgency=low
 
   * Initial Release.

@@ -1,1 +1,9 @@
-NoAegisFile
+<aegis>
+    <request policy="add">
+        <credential name="UID::root" />
+        <credential name="GID::root" />
+        <credential name="GRP::root" />
+
+        <for path="/opt/system-ui-brightness/bin/set_brightness.sh" />
+    </request>
+</aegis>
